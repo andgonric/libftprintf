@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 21:16:18 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/17 12:34:33 by andgonca         ###   ########.fr       */
+/*   Created: 2022/10/26 21:17:51 by andgonca          #+#    #+#             */
+/*   Updated: 2022/11/17 16:45:05 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include <unistd.h>
 
-int	ft_printf(const char *str, ...)
+int	ft_strlen(const char *arg)
 {
-	int		p;
-	int		leng;
-	va_list	args;
+	int	c;
 
-	p = 0;
-	leng = 0;
-	va_start(args, str);
-	while (str[p])
-	{
-		if (str[p] == '%')
-			leng += ft_typearg(str[p + 1],args);
-		else
-			leng += ft_putchar(str[p]);	
-		p++;	
-	}
-	va_end(args);
-	return (leng);
+	c = 0;
+	while (arg[c])
+		c++;
+	return (c);
 }
