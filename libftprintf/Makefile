@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/27 21:59:34 by andgonca          #+#    #+#              #
-#    Updated: 2022/11/21 21:47:53 by andgonca         ###   ########.fr        #
+#    Created: 2022/11/15 21:11:44 by andgonca          #+#    #+#              #
+#    Updated: 2022/11/21 22:09:48 by andgonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = libftprintf.a
 
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_strlen.c ft_itoa.c
+SRC = ft_printf.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -31,4 +31,4 @@ clean:
 fclean: clean
 	rm -f $(NAME) $(OBJ)
 
-re: fclean $(NAME) $(OBJ) $(OBJ2)
+re: fclean $(NAME) $(OBJ)

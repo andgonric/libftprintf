@@ -6,7 +6,7 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 21:16:18 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/17 12:34:33 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/11/21 21:48:27 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int	ft_printf(const char *str, ...)
 	while (str[p])
 	{
 		if (str[p] == '%')
-			leng += ft_typearg(str[p + 1],args);
+			leng += ft_typearg(str[p + 1], args);
 		else
-			leng += ft_putchar(str[p]);	
-		p++;	
+			leng += ft_printchar(str[p]);
+		p++;
 	}
 	va_end(args);
 	return (leng);

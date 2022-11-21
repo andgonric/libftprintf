@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_unsig.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 21:17:51 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/21 22:11:51 by andgonca         ###   ########.fr       */
+/*   Created: 2022/11/21 22:30:16 by andgonca          #+#    #+#             */
+/*   Updated: 2022/11/21 22:56:59 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "<unistd.h>"
+#include "libftprintf.h"
 
-int	ft_strlen(const char *arg)
+int	ft_putnbr_unsig(unsigned int nbr)
 {
-	int	c;
+	char	*str;
 
-	c = 0;
-	while (arg[c])
-		c++;
-	return (c);
+	str = ft_itoa(nbr);
+	if (nbr >= 10)
+	{
+		ft_putnbr_unsig(nbr / 10);
+		ft_putnbr_unsig(nbr % 10);
+	}
+	else
+	{
+		ft_printchar(nbr + 48);
+	}
+	return (ft_strlen(str));
 }
