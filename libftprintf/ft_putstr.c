@@ -6,11 +6,12 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:55:55 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/17 15:22:19 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/11/24 22:22:58 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+#include "./libft/libft.h"
 
 int	ft_putstr(char *str)
 {
@@ -22,5 +23,6 @@ int	ft_putstr(char *str)
 		write(1, &str[c], 1);
 		c++;
 	}
+
 	return (ft_strlen(str));
 }

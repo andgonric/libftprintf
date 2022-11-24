@@ -6,13 +6,13 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:41:07 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/17 15:11:38 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/11/22 08:19:45 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printchar(char c)
+int	ft_printchar(int c)
 {
 	write (1, &c, 1);
 	return (1);
