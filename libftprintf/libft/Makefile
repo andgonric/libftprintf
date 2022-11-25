@@ -6,7 +6,7 @@
 #    By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/27 21:59:34 by andgonca          #+#    #+#              #
-#    Updated: 2022/11/24 22:22:52 by andgonca         ###   ########.fr        #
+#    Updated: 2022/11/25 21:43:52 by andgonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,4 +31,4 @@ clean:
 fclean: clean
 	rm -f $(NAME) $(OBJ)
 
-re: fclean $(NAME) $(OBJ) $(OBJ2)
+re: fclean $(NAME) $(OBJ)

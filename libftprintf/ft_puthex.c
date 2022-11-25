@@ -6,7 +6,7 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 17:17:17 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/24 23:03:28 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/11/25 23:29:48 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,6 @@ int	ft_puthex(unsigned int num, char size)
 
 	hexachar = "0123456789ABCDEF";
 	pos = 0;
-	/*if (num < 0)
-	{
-		ft_putchar("-");
-		num *= -1;
-		pos++;
-	}*/
 	while (num > 16)
 	{
 		pot = ft_pot(num);
@@ -69,5 +63,7 @@ int	ft_puthex(unsigned int num, char size)
 	convert[pos] = hexachar[num];
 	if (size == 'l')
 		ft_putstr_lower(convert);
+	else
+		ft_putstr(convert);	
 	return (pos);
 }

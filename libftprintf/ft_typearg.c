@@ -6,7 +6,7 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:50:10 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/24 22:59:07 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/11/25 23:18:04 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_typearg(const char tp, va_list args)
 		ret = ft_printchar(va_arg(args, int));
 	if (tp == 's')
 		ret = ft_putstr(va_arg(args, char *));
-	//if (tp == 'p')
-	//	ret = ft_puthex(va_arg(args, unsigned long), "u");
+	if (tp == 'p')
+		ret = ft_puthex(va_arg(args, unsigned long), "u");
 	if (tp == 'd')
 		ret = ft_putnbr(va_arg(args, int));
 	if (tp == 'i')
