@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/19 17:17:17 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/25 23:29:48 by andgonca         ###   ########.fr       */
+/*   Created: 2022/11/26 16:12:15 by andgonca          #+#    #+#             */
+/*   Updated: 2022/12/01 19:11:51 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	ft_pot(unsigned int num)
+int	ft_pot_point(unsigned long num)
 {
-	unsigned int	pot;	
+	unsigned long	pot;	
 
 	pot = 1;
 	while (pot < num)
@@ -27,43 +27,25 @@ int	ft_pot(unsigned int num)
 	return (pot);
 }
 
-void	ft_putstr_lower(char *str)
+int	ft_puthex(unsigned int num, char *size)
 {
-	int	c;
-
-	c = 0;
-	while (str[c])
-	{
-		if (str[c] >= 65 && str[c] <= 90)
-			str[c] += 32;
-		c++;
-	}
-	ft_putstr(str);
-}
-
-int	ft_puthex(unsigned int num, char size)
-{
-	unsigned int		pot;
-	unsigned int		res;
-	unsigned int		numero;
+	unsigned long		pot;
+	unsigned long		res;
+	unsigned long		numero;
 	int					pos;
 	char				convert[17];
-	char				*hexachar;
 
-	hexachar = "0123456789ABCDEF";
 	pos = 0;
 	while (num > 16)
 	{
-		pot = ft_pot(num);
+		pot = ft_pot_point(num);
 		res = num / pot;
-		convert[pos++] = hexachar[res];
+		convert[pos++] = size[res];
 		numero = res * pot;
 		num -= numero;
 	}
-	convert[pos] = hexachar[num];
-	if (size == 'l')
-		ft_putstr_lower(convert);
-	else
-		ft_putstr(convert);	
+	convert[pos] = size[num];
+	pos += 2;
+	ft_putstr(convert);
 	return (pos);
 }

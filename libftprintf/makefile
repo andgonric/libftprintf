@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 21:11:44 by andgonca          #+#    #+#              #
-#    Updated: 2022/11/25 22:59:13 by andgonca         ###   ########.fr        #
+#    Updated: 2022/11/26 16:23:50 by andgonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,11 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_printf.c ft_printchar.c ft_putstr.c \
+SRC = ft_printf.c ft_printchar.c ft_putstr.c ft_puthex_point.c \
 	ft_puthex.c ft_putnbr.c ft_putnbr_unsig.c ft_putperc.c \
 	ft_itoa.c ft_strlen.c
 
 OBJ = $(SRC:.c=.o)
-
 
 all: $(NAME)
 

@@ -6,11 +6,11 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 15:00:15 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/25 22:46:58 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/11/26 15:24:07 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putperc(void)
 {

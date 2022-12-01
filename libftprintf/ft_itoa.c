@@ -6,11 +6,11 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 21:21:22 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/25 22:46:11 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/11/26 15:23:10 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_cont(long int n)
 {

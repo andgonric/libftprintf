@@ -6,11 +6,11 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 15:33:51 by andgonca          #+#    #+#             */
-/*   Updated: 2022/11/25 22:46:50 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/11/26 15:24:01 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int n)
 {
