@@ -6,7 +6,7 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 21:08:08 by andgonca          #+#    #+#             */
-/*   Updated: 2022/12/01 19:04:01 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/12/02 08:07:05 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_printf(const char *str, ...);
 int		ft_printchar(int c);
 int		ft_putstr(char *str);
 int		ft_puthex_point(unsigned long num);
-int		ft_putnbr(int n);
+int		ft_putnbr(int nbr);
 int		ft_putnbr_unsig(unsigned int nbr);
 
 int		ft_puthex(unsigned int num, char *size);

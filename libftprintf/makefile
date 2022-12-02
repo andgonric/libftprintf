@@ -6,13 +6,13 @@
 #    By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 21:11:44 by andgonca          #+#    #+#              #
-#    Updated: 2022/11/26 16:23:50 by andgonca         ###   ########.fr        #
+#    Updated: 2022/12/02 08:07:15 by andgonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
