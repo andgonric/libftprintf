@@ -6,7 +6,7 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 16:12:15 by andgonca          #+#    #+#             */
-/*   Updated: 2022/12/01 19:11:51 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/12/02 08:24:11 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,19 @@ int	ft_puthex(unsigned int num, char *size)
 	unsigned long		res;
 	unsigned long		numero;
 	int					pos;
-	char				convert[17];
 
 	pos = 0;
+	if (num == 0)
+		return (write(1, "0", 1));
 	while (num > 16)
 	{
 		pot = ft_pot_point(num);
 		res = num / pot;
-		convert[pos++] = size[res];
+		write(1, &size[res], 1);
 		numero = res * pot;
 		num -= numero;
 	}
-	convert[pos] = size[num];
+	write(1, &size[num], 1);
 	pos += 2;
-	ft_putstr(convert);
 	return (pos);
 }
