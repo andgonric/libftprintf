@@ -6,7 +6,7 @@
 #    By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 21:11:44 by andgonca          #+#    #+#              #
-#    Updated: 2022/12/02 08:07:15 by andgonca         ###   ########.fr        #
+#    Updated: 2022/12/04 19:01:14 by andgonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_printf.c ft_printchar.c ft_putstr.c ft_puthex_point.c \
 	ft_puthex.c ft_putnbr.c ft_putnbr_unsig.c ft_putperc.c \
-	ft_itoa.c ft_strlen.c
+	ft_itoa.c
 
 OBJ = $(SRC:.c=.o)
 

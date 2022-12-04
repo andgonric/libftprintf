@@ -6,12 +6,11 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 21:16:18 by andgonca          #+#    #+#             */
-/*   Updated: 2022/12/01 21:16:55 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/12/04 18:57:36 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_typearg(const char tp, va_list args)
 {
@@ -64,10 +63,12 @@ int	ft_printf(const char *str, ...)
 
 /*int main()
 {
-	int x = 50;
-   int *ptr = &x;
-   int	count;
-   count = ft_printf("The address is: %p, the value is %d\n", ptr, *ptr);
+	int count;
+	int	count2;
+
+
+   count = ft_printf("%p\n", 0);
 	printf ("%d\n", count);
-   //printf("The address is: %p, the value is %d", ptr, *ptr);
+   count2 = printf("%p\n", 0);
+   	printf ("%d\n", count2);
 }*/

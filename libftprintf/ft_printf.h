@@ -6,7 +6,7 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 21:08:08 by andgonca          #+#    #+#             */
-/*   Updated: 2022/12/02 08:07:05 by andgonca         ###   ########.fr       */
+/*   Updated: 2022/12/04 19:00:57 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ int		ft_putnbr_unsig(unsigned int nbr);
 int		ft_puthex(unsigned int num, char *size);
 int		ft_putperc(void);
 
-int		ft_strlen(const char *arg);
 char	*ft_itoa(int n);
 #endif
