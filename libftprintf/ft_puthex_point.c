@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_count_len(uintptr_t num)
+int	ft_count_len(size_t num)
 {
 	int	leng;
 
@@ -25,9 +25,9 @@ int	ft_count_len(uintptr_t num)
 	return (leng);
 }
 
-void	ft_put_point(uintptr_t num)
+void	ft_put_point(size_t num)
 {
-	int	n;
+	size_t	n;
 
 	if (num >= 16)
 	{
@@ -38,29 +38,28 @@ void	ft_put_point(uintptr_t num)
 	{
 		if (num <= 9)
 		{
-			n = (int)num + '0';
+			n = num + '0';
 			ft_printchar(n);
 		}
 		else
 		{
-			n = (int)num - 10 + 'a';
+			n = num - 10 + 'a';
 			ft_printchar(n);
 		}
 	}
 }
 
-int	ft_puthex_point(unsigned long num)
+int	ft_puthex_point(size_t num)
 {
 	int	leng;
 
 	leng = 0;
-	leng += write(1, "0x", 2);
-	if (num == 0)
-		leng += write(1, "0", 1);
-	else
+	if (!num)
 	{
-		ft_put_point(num);
-		leng += ft_count_len(num);
+		return (write(1, "(nil)", 5));
 	}
+	leng += write(1, "0x", 2);
+	ft_put_point(num);
+	leng += ft_count_len(num);
 	return (leng);
 }

@@ -6,7 +6,7 @@
 /*   By: andgonca <andgonca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 21:16:18 by andgonca          #+#    #+#             */
-/*   Updated: 2022/12/04 18:57:36 by andgonca         ###   ########.fr       */
+/*   Updated: 2023/01/11 20:25:16 by andgonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_typearg(const char tp, va_list args)
 	if (tp == 's')
 		ret = ft_putstr(va_arg(args, char *));
 	if (tp == 'p')
-		ret = ft_puthex_point(va_arg(args, unsigned long));
+		ret = ft_puthex_point(va_arg(args, size_t));
 	if (tp == 'd')
 		ret = ft_putnbr(va_arg(args, int));
 	if (tp == 'i')
@@ -64,11 +64,10 @@ int	ft_printf(const char *str, ...)
 /*int main()
 {
 	int count;
-	int	count2;
-
+	//int	count2;
 
    count = ft_printf("%p\n", 0);
-	printf ("%d\n", count);
-   count2 = printf("%p\n", 0);
-   	printf ("%d\n", count2);
+	//printf ("%d\n", count);
+   //count2 = printf("%p\n", 0);
+   //	printf ("%d\n", count2);
 }*/
